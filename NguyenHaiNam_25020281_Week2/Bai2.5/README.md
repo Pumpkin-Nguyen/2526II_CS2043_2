@@ -1,0 +1,4 @@
+# Câu hỏi: == và equals khác nhau như thế nào?
+- **==** so sánh nội dung của 2 biến tại 2 vế. Trong trường hợp này, 2 biến *book1* và *book2* có nội dung là địa chỉ ô nhớ dẫn tới 2 đối tượng tương ứng được khởi tạo. Do 2 địa chỉ này khác nhau nên kết quả trả về false. Tóm tắt là kiểm tra 2 biến có trỏ vào cùng 1 đối tượng hay không?
+
+- **Phương thức equals()** lấy cách hoạt động của == làm gốc nếu không được override. Trong trường hợp này, equals() đã được override: so sánh các giá trị thuộc tính của 2 biến. Vì vậy, 2 biến *book1* và *book2* đều trỏ vào các đối tượng có cùng title, author và price nên kết quả trả về true.
