@@ -1,0 +1,62 @@
+name: Run all exercises
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  run-all-run-sh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Execute every run.sh
+        shell: bash
+        run: |
+          set -u
+
+          mapfile -t scripts < <(find . -type f -name "run.sh" -not -path "./.git/*" | sort)
+
+          if [[ ${#scripts[@]} -eq 0 ]]; then
+            echo "No run.sh scripts found."
+            exit 1
+          fi
+
+          failed=0
+
+          for script in "${scripts[@]}"; do
+            dir="$(dirname "$script")"
+
+            echo "============================================================"
+            echo "Running: $script"
+
+            if (cd "$dir" && bash ./run.sh); then
+              echo "PASS: $script"
+            else
+              echo "FAIL: $script"
+              failed=1
+            fi
+
+            if [[ -d "$dir/build" ]]; then
+              rm -rf -- "$dir/build"
+              echo "CLEANED: $dir/build"
+            fi
+          done
+
+          echo "============================================================"
+          if [[ "$failed" -ne 0 ]]; then
+            echo "At least one exercise failed."
+            exit 1
+          fi
+
+          echo "All run.sh scripts passed."

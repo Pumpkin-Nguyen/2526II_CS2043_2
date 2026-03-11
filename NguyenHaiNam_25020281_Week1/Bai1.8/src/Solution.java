@@ -1,17 +1,13 @@
 public class Solution {
-    public int reverse(int x) {
-        int res = 0;
+    public boolean isPalindrome(int x) {
+        int new_x = 0;
         while (x != 0) {
             int temp = x % 10;
             x /= 10;
-            if (res > Integer.MAX_VALUE) return 0;
-            res = res * 10 + temp;
+            if (new_x > Integer.MAX_VALUE) return false;
+            new_x = new_x * 10 + temp;
         }
-        return res;
-    }
-
-    public boolean isPalindrome(int x) {
-        return x == reverse(x);
+        return new_x == x;
     }
 
 
