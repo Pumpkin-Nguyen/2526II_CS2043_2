@@ -18,7 +18,7 @@ public class Person {
         return this.name;
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         Person p = new Person("Nam");
         p.setMe(p);
         System.out.println(p.me.getName());

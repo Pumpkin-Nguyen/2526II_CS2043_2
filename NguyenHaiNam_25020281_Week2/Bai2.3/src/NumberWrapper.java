@@ -20,7 +20,7 @@ public class NumberWrapper {
         b.setValue(temp);
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         NumberWrapper n1 = new NumberWrapper();
         NumberWrapper n2 = new NumberWrapper();
         n1.setValue(5);

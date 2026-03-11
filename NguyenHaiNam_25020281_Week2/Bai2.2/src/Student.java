@@ -52,7 +52,7 @@ public class Student {
         System.out.printf("ID: %s | Name: %s | Email: %s | GPA: %.2f\n", this.id, this.name, this.email, this.gpa);
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         Student student1 = new Student();
         Student student2 = new Student("25020281", "Nguyen Hai Nam");
         Student student3 = new Student(student2);

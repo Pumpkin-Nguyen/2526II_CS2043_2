@@ -5,7 +5,7 @@ public class Inventory {
         this.items = initialItems;
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         Product[] arr = { new Product("0", "Laptop", 1000.0), new Product("1", "Iphone", 699.2) };
         Inventory kho = new Inventory(arr);
 

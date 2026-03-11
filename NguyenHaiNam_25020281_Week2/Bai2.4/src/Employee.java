@@ -12,7 +12,7 @@ public class Employee {
         this.birthday = otherEmployee.birthday;
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         MyDate emp1Date = new MyDate(1, 1, 2000);
         Employee emp1 = new Employee("Nam", emp1Date);
         Employee emp2 = new Employee(emp1);

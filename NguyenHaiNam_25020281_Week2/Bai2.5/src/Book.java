@@ -18,7 +18,7 @@ public class Book {
             (Double.compare(this.price, otherBook.price) == 0);
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         Book book1 = new Book("Miễn dịch", "Kurzgesagt", 36.00);
         Book book2 = new Book("Miễn dịch", "Kurzgesagt", 36.00);
 

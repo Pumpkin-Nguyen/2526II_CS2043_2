@@ -31,7 +31,7 @@ public class Account {
         return Arrays.copyOf(history, history.length);
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         Account account1 = new Account("25020281", 300.0);
         Transaction t1 = new Transaction("0", 10, "10:42 PM 10/3/2026");
         account1.addTransaction(t1);
