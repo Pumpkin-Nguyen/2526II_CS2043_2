@@ -33,12 +33,23 @@ jobs:
           fi
 
           failed=0
+          skipped=0
 
           for script in "${scripts[@]}"; do
             dir="$(dirname "$script")"
 
             echo "============================================================"
             echo "Running: $script"
+
+            if [[ -d "$dir/src" ]] && grep -R -q --include="*.java" "Scanner" "$dir/src"; then
+              echo "SKIP: $script (Scanner detected in source)"
+              skipped=$((skipped + 1))
+              if [[ -d "$dir/build" ]]; then
+                rm -rf -- "$dir/build"
+                echo "CLEANED: $dir/build"
+              fi
+              continue
+            fi
 
             if (cd "$dir" && bash ./run.sh); then
               echo "PASS: $script"
@@ -54,6 +65,7 @@ jobs:
           done
 
           echo "============================================================"
+          echo "Skipped scripts: $skipped"
           if [[ "$failed" -ne 0 ]]; then
             echo "At least one exercise failed."
             exit 1
