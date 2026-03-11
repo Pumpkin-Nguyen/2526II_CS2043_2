@@ -33,16 +33,16 @@ public class Account {
 
     public static void main() {
         Account account1 = new Account("25020281", 300.0);
-        Transaction t1 = new Transaction("1", 10, "10:42 PM 10/3/2026");
+        Transaction t1 = new Transaction("0", 10, "10:42 PM 10/3/2026");
         account1.addTransaction(t1);
 
-        Transaction t2 = new Transaction("2", -4, "2:12 PM 7/3/2026");
+        Transaction t2 = new Transaction("1", -4, "2:12 PM 7/3/2026");
         account1.addTransaction(t2);
 
         Transaction[] history = account1.getHistory();
         System.out.println("Amount of transaction 1: " + history[0].getAmount());
 
-        // history[0].amount = 9999999; // Không thể truy cập amount do final
+        // history[0].amount = 9999999; // Không thể thay đổi amount do final
         history[0] = null;
 
         Transaction[] history2 = account1.getHistory();

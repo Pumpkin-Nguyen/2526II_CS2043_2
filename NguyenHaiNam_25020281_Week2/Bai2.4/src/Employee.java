@@ -20,9 +20,9 @@ public class Employee {
         MyDate newDate = new MyDate(2, 2, 2022);
         emp1.birthday = newDate;
 
-        System.out.print("Employee 1: ");
+        System.out.print("Employee 1's Birthday: ");
         emp1.birthday.display();
-        System.out.print("Employee 2: ");
+        System.out.print("Employee 2's Birthday: ");
         emp2.birthday.display();
     }
 }

@@ -17,6 +17,6 @@ public class Product {
     }
 
     public void display() {
-        System.out.printf("ID: %s | Name: %s | Price: %.2f\n", id, name, price);
+        System.out.printf("ID: %s | Name: %s | Price: %.2f$\n", id, name, price);
     }
 }

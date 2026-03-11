@@ -2,7 +2,12 @@ public class Student {
     private String id, name, email;
     private double gpa;
 
-    public Student() {   }
+    public Student() {
+        this.id = "None";
+        this.name = "None";
+        this.email = "None";
+        this.gpa = 0;
+    }
     public Student(String id, String name) {
         this.id = id;
         this.name = name;
