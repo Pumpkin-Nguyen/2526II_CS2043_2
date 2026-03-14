@@ -11,6 +11,11 @@ abstract class Product {
     public double getPrice() {
         return this.price;
     }
+
+    public String getName() {
+        return this.name;
+    }
     
     public abstract double getFinalPrice();
+    public abstract void printDetails();
 }

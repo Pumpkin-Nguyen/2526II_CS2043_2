@@ -11,7 +11,13 @@ public class Electronics extends Product {
         this.warrantyExpense = warrantyExpense;
     }
 
+    @Override
     public double getFinalPrice() {
         return this.getPrice() * 1.1 + warrantyExpense;
+    }
+
+    @Override
+    public void printDetails() {
+        System.out.printf("%s - Electronics - %.1f\n", this.getName(), this.getFinalPrice());
     }
 }

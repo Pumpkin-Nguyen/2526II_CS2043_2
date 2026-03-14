@@ -1,5 +1,5 @@
 # Sơ đồ
-![alt text](Bai5_Week3.drawio.png)
+![alt text](Week3_Bai5.png)
 
 - **Lớp trừu tượng Employee** chứa:
     + Các thuộc tính: id, name, birthday (String)
