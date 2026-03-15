@@ -3,6 +3,7 @@ public class VIPRoom extends Room {
         super(number, price, daysRent);
     }
 
+    @Override
     public int getFinalPrice() {
         return this.getPrice() * this.getDaysRent();
     }

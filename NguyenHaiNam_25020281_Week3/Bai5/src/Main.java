@@ -27,6 +27,7 @@ public class Main {
             }
 
         }
+        System.out.println("---------------");
         
         System.out.println("---BẢNG LƯƠNG CHI TIẾT---");
         for (Employee employee : employees) {

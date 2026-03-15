@@ -26,6 +26,8 @@ public class Main {
             }
         }
 
+        System.out.println("---------------");
+
         for (Robot robot : robots) {
             robot.performMainTask();
             System.out.println();

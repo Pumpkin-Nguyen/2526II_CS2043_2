@@ -26,6 +26,8 @@ public class Main {
                 order[i] = new Food(String.valueOf(i), name, price, expireDate);
             }
         }
+        
+        System.out.println("---------------");
 
         double total = 0;
         System.out.println("---Orders---");

@@ -9,6 +9,8 @@ public class Main {
         String typeRoom = parts[0];
         int daysRent = Integer.parseInt(parts[1]);
 
+        System.out.println("---------------");
+
         if (typeRoom.equals("V")) {
             VIPRoom room = new VIPRoom("001", 2_000_000, daysRent);
             System.out.println(room.getFinalPrice());

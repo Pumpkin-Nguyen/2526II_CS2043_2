@@ -3,11 +3,13 @@ public class FishRobot extends Robot implements Swimmable {
         super(id, modelName);
     }    
 
+    @Override
     public void performMainTask() {
         System.out.println(this.getModelName() + " performing main task");
         this.swim();
     }
 
+    @Override
     public void swim() {
         System.out.println(this.getModelName() + " swimming");
     }

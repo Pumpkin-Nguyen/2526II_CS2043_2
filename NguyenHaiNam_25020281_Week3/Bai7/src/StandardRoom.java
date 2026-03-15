@@ -3,6 +3,7 @@ public class StandardRoom extends Room {
         super(number, price, daysRent);
     }
 
+    @Override
     public int getFinalPrice() {
         int daysRent = getDaysRent();
         if (daysRent > 3) {
