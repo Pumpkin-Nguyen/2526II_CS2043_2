@@ -1,0 +1,3 @@
+interface CanFly {
+    void fly();
+}
