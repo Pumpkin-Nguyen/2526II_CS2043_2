@@ -9,4 +9,12 @@ public class Book {
         this.year = year;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s (%s, %d)", title, author, year);
+    }
 }
