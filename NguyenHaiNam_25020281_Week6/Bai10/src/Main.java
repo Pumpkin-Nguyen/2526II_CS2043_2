@@ -9,6 +9,5 @@ public class Main {
         logger1.logInfo("Processing data...");
 
         logger2.logError("Something went wrong");
-
     }
 }

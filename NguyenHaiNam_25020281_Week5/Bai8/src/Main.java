@@ -1,7 +1,13 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // ReadWrite.writer();
+        Scanner scanner = new Scanner(System.in);
 
-        ReadWrite.reader();
+        ReadWrite.writer(scanner);
+
+        ReadWrite.reader(scanner);
+
+        scanner.close();
     }
 }

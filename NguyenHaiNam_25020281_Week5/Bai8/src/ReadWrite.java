@@ -11,8 +11,7 @@ import java.util.Scanner;
 
 public class ReadWrite {
     
-    public static void writer() {
-        Scanner scanner = new Scanner(System.in);
+    public static void writer(Scanner scanner) {
 
         System.out.print("n = ");
         int n = Integer.parseInt(scanner.nextLine());
@@ -39,13 +38,9 @@ public class ReadWrite {
             System.out.println("I/O error.");
             e.printStackTrace();
         }
-
-        scanner.close();
     }
 
-    public static void reader() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static void reader(Scanner scanner) {
         System.out.print("Source file: ");
         String file = scanner.nextLine();
 
@@ -63,7 +58,5 @@ public class ReadWrite {
             System.out.println("I/O error.");
             e.printStackTrace();
         }
-        
-        scanner.close();
     }
 }
