@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import export.ExcelExportApp;
 import export.Export;
-import export.ExportFactory;
+import export.ExportApp;
+import export.PdfExportApp;
 import player.PlayerAdapter;
 
 public class Main {
@@ -18,10 +20,10 @@ public class Main {
 
         // EXPORT
         System.out.println("---Export---");
-        Export pdfExport = ExportFactory.getExport("pdf");
+        ExportApp pdfExport = new PdfExportApp();
         pdfExport.export();
 
-        Export excelExport = ExportFactory.getExport("excel");
+        ExportApp excelExport = new ExcelExportApp();
         excelExport.export();
 
         // PLAYER

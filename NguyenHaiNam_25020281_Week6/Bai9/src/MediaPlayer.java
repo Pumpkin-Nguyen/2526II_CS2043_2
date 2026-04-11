@@ -12,6 +12,6 @@ public class MediaPlayer {
     }
 
     public void playVideo(String video) {
-        audioPlayer.playAudio(video);
+        videoPlayer.playVideo(video);
     }
 }
