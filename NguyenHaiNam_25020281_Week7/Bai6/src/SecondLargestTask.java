@@ -1,12 +1,9 @@
-import java.util.List;
 import java.util.concurrent.Callable;
 
 public class SecondLargestTask implements Callable<Integer> {
-    private int index;
     private int[] nums;
 
-    public SecondLargestTask(int index, int[] nums) {
-        this.index = index;
+    public SecondLargestTask(int[] nums) {
         this.nums = nums;
     }
 
@@ -29,10 +26,5 @@ public class SecondLargestTask implements Callable<Integer> {
         if (secondMaxValue == Integer.MIN_VALUE) return null;
 
         return secondMaxValue;
-    }
-    
-
-    public int getIndex() {
-        return this.index;
     }
 }

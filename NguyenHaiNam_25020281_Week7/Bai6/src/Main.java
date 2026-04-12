@@ -18,13 +18,13 @@ public class Main {
         List<SecondLargestTask> tasks = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            System.out.print("Nhập số phần tử mảng " + i + ": ");
+            System.out.print("Nhập mảng (số phần tử đứng đầu tiên) " + i + ": ");
             int m = scanner.nextInt();
             int[] arr = new int[m];
             for (int j = 0; j < m; j++) {
                 arr[j] = scanner.nextInt();
             }
-            tasks.add(new SecondLargestTask(i, arr));
+            tasks.add(new SecondLargestTask(arr));
         }
 
         List<Future<Integer>> futures = new ArrayList<>();
