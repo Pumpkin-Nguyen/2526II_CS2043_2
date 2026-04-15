@@ -11,8 +11,6 @@ public class PrimeFilterTask implements Function<List<Integer>, List<Integer>> {
         for (int num : nums) {
             if (checkPrime(num)) primes.add(num);
         }
-
-        System.out.println("Stage 1 - Array ");
         return primes;
     }
     

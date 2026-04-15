@@ -18,7 +18,7 @@ public class SecondLargestTask implements Callable<Integer> {
             if (num > maxValue) {
                 secondMaxValue = maxValue;
                 maxValue = num;
-            } else if (maxValue < num && num < secondMaxValue) {
+            } else if (maxValue > num && num > secondMaxValue) {
                 secondMaxValue = num;
             }
         }
