@@ -18,18 +18,18 @@ public class Worker implements Runnable {
 
     public void stop() {
         this.running = false;
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            System.out.println("Thread interrupted.");
-            e.printStackTrace();
-        }
     }
 
     @Override
     public void run() {
         while (running) {
             System.out.println("Working...");
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                System.out.println("Thread interrupted.");
+                e.printStackTrace();
+            }
         }
     }
 }

@@ -6,10 +6,10 @@ public class Main {
         try {
             Thread.sleep(1000);
 
-            System.out.println("Stopping the worker...");
             worker.stop();
+            System.out.println("Stopping the worker...");
             
-            t1.join();
+            t1.join();2
         } catch (InterruptedException e) {
             System.out.println("Thread interrupted.");
             e.printStackTrace();
