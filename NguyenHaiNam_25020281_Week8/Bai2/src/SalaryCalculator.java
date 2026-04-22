@@ -1,17 +1,17 @@
 public class SalaryCalculator {
-    private static const double HEALTH_INSURANCE_RATE = 0.08;
-    private static const double UNEMPLOYMENT_INSURANCE_RATE = 0.015;
+    private static final double HEALTH_INSURANCE_RATE = 0.08;
+    private static final double UNEMPLOYMENT_INSURANCE_RATE = 0.015;
 
-    private static const double MINIMUM_TAXABLE_INCOME = 11_000_000;
+    private static final double MINIMUM_TAXABLE_INCOME = 11_000_000;
 
-    private static const double TIER_1_MAX_TAXABLE_INCOME = 5_000_000;
-    private static const double TIER_1_TAX_RATE = 0.05;
+    private static final double TIER_1_MAX_TAXABLE_INCOME = 5_000_000;
+    private static final double TIER_1_TAX_RATE = 0.05;
 
-    private static const double TIER_2_MAX_TAXABLE_INCOME = 10_000_000;
-    private static const double TIER_2_TAX_RATE = 0.1;
-    private static const double TIER_2_TAX_MINIMUM = 250_000;
+    private static final double TIER_2_MAX_TAXABLE_INCOME = 10_000_000;
+    private static final double TIER_2_TAX_RATE = 0.1;
+    private static final double TIER_2_TAX_MINIMUM = 250_000;
 
-    private static const double TIER_3_TAX_MINIMUM = 750_000;
+    private static final double TIER_3_TAX_MINIMUM = 750_000;
 
     public void printPayroll(String name, double baseSalary,
                          int workDays, int totalDays,

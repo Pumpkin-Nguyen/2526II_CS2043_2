@@ -1,5 +1,3 @@
-import v1.Vehicle;
-
 abstract class Vehicle {
     protected String plate;
     protected String brand;
