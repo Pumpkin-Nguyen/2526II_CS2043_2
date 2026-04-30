@@ -1,0 +1,32 @@
+name: Build
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Run Maven Build (Test & Package)
+        run: mvn clean package
+
+      - name: Upload JAR Artifact
+        uses: actions/upload-artifact@v5
+        if: success()
+        with:
+          name: built-application-jar
+          path: target/*.jar
+          retention-days: 7
