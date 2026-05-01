@@ -1,5 +1,7 @@
+package org.example.bai2;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello from Bai6!");
+        System.out.println("akksas");
     }
 }

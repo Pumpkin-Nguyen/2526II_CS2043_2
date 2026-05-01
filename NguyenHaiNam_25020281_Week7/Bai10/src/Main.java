@@ -9,7 +9,7 @@ public class Main {
             worker.stop();
             System.out.println("Stopping the worker...");
             
-            t1.join();2
+            t1.join();
         } catch (InterruptedException e) {
             System.out.println("Thread interrupted.");
             e.printStackTrace();

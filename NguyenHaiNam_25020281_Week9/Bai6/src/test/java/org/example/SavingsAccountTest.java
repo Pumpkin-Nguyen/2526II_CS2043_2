@@ -1,18 +1,18 @@
-package org.example.bai2;
+package org.example;
 
+import org.example.bank_system.SavingsAccount;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.example.bai2.bank_system.SavingsAccount;
 import org.junit.jupiter.api.Test;
 
 public class SavingsAccountTest {
 
-    private final SavingsAccount account = new SavingsAccount(123456789, 1000.0);
+    private SavingsAccount account;
 
     @Test
     void deposit_validAmount_success() {
+        account = new SavingsAccount(123456789, 1000.0);
         account.deposit(500.0);
 
-        assertEquals(1400.0, account.getBalance());
+        assertEquals(1500.0, account.getBalance());
     }
 }
