@@ -1,0 +1,4 @@
+2026-05-03 09:31:29 [main] INFO  com.example.Calculator - Bắt đầu thực hiện phép chia 20 cho 5
+2026-05-03 09:31:29 [main] INFO  com.example.Calculator - Phép tính thành công. Kết quả là: 4
+2026-05-03 09:31:29 [main] INFO  com.example.Calculator - Bắt đầu thực hiện phép chia 10 cho 0
+2026-05-03 09:31:29 [main] ERROR com.example.Calculator - Đã xảy ra lỗi khi chia cho 0: / by zero

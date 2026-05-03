@@ -7,12 +7,12 @@ import org.junit.jupiter.api.Test;
 
 public class SavingsAccountTest {
 
-    private final SavingsAccount account = new SavingsAccount(123456789, 1000.0);
+  private final SavingsAccount account = new SavingsAccount(123456789, 1000.0);
 
-    @Test
-    void deposit_validAmount_success() {
-        account.deposit(500.0);
+  @Test
+  void deposit_validAmount_success() {
+    account.deposit(500.0);
 
-        assertEquals(1400.0, account.getBalance());
-    }
+    assertEquals(1400.0, account.getBalance());
+  }
 }

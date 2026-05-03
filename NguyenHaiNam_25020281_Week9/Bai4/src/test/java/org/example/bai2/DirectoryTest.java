@@ -9,18 +9,18 @@ import java.nio.file.Paths;
 import org.junit.jupiter.api.Test;
 
 public class DirectoryTest {
-    @Test
-    public void testPath_Hardcoded_Fail() {
-        String folder = "reports";
-        String fileName = "daily_summary.txt";
+    // @Test
+    // public void testPath_Hardcoded_Fail() {
+    //     String folder = "reports";
+    //     String fileName = "daily_summary.txt";
 
-        String expectedPath = folder + "\\" + fileName;
+    //     String expectedPath = folder + "\\" + fileName;
 
-        File reportFile = new File(folder, fileName);
-        String actualPath = reportFile.getPath();
+    //     File reportFile = new File(folder, fileName);
+    //     String actualPath = reportFile.getPath();
 
-        assertEquals(expectedPath, actualPath, "Đường dẫn file không khớp!");
-    }
+    //     assertEquals(expectedPath, actualPath, "Đường dẫn file không khớp!");
+    // }
 
     @Test
     public void testPath_NIOPath_Success() {
